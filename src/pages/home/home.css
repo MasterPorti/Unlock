@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+body {
+  background-color: #ef626c;
+  font-family: "Source Code Pro", monospace;
+}
+
+nav {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  color: #f0f8ff;
+}
+.logo {
+  width: 5rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.subTitle {
+  color: #f0f8ff;
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.inputEncrypt {
+  border-radius: 0.5rem;
+  width: 90vw;
+  padding: 0.5rem;
+  color: #f0f8ff;
+  max-width: 90vw;
+  min-width: 90vw;
+  height: 10rem;
+  margin-left: 1rem;
+  background-color: #48484849;
+}
+
+.input {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  font-size: 2rem;
+  color: #f0f8ff;
+  margin-left: 1rem;
+  border-bottom: solid #48484849 5px;
+  font-family: "Source Code Pro", monospace;
+}
+.in:focus-visible {
+  outline: none;
+}
+
+.in:focus {
+  outline: none;
+}
+
+.in:active {
+  outline: none;
+}
+
+.buttonContainer {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonEncrypt {
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 5rem;
+  border-radius: 1rem;
+  width: 17.6875rem;
+  background-color: black;
+  color: #f0f8ff;
+}
