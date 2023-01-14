@@ -17,7 +17,7 @@ nav {
   width: 5rem;
 }
 
-.title {
+.titleLogo {
   font-weight: 700;
   font-size: 2.5rem;
 }
@@ -32,10 +32,11 @@ nav {
 .inputEncrypt {
   border-radius: 0.5rem;
   width: 90vw;
+  min-width: 25rem;
   padding: 0.5rem;
   color: #f0f8ff;
-  max-width: 90vw;
-  min-width: 90vw;
+  width: 40vw;
+  resize: none;
   height: 10rem;
   margin-left: 1rem;
   background-color: #48484849;
@@ -46,7 +47,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90vw;
+  width: 30vw;
+  min-width: 14.0625rem;
   font-size: 2rem;
   color: #f0f8ff;
   margin-left: 1rem;
@@ -82,4 +84,74 @@ nav {
   width: 17.6875rem;
   background-color: black;
   color: #f0f8ff;
+}
+
+.introContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.claveContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desencryptContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 680px) {
+  .introContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inputEncrypt {
+    width: 90vw;
+    max-width: 90vw;
+    min-width: 90vw;
+  }
+  .claveContainer {
+    align-items: flex-start;
+  }
+  .desencryptContainer {
+    align-items: flex-start;
+  }
+  .buttonEncrypt {
+    font-size: 1.8rem;
+    font-weight: 700;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: #f0f8ff;
+  }
+}
+
+.linkContainer {
+  margin-top: 1.3rem;
+  border-bottom: 1rem;
+}
+
+.link {
+  display: flex;
+  text-align: center;
+  background-color: #8cdfd6;
+  padding: 1rem;
+  word-wrap: break-word;
+  line-height: 10px;
+  border-radius: 1rem;
 }

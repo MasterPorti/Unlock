@@ -4,6 +4,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home/home'
 import Encriptar from './pages/encriptar/encriptar'
+import HomeParams from './pages/homeParams/home'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/admin' element={<Encriptar />}></Route>
-        <Route path='/:encrypted' element={<Home />}></Route>
+        <Route path='/:encrypted' element={<HomeParams />}></Route>
       </Routes>
     </div>
   )

@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/logo.svg'
-import './home.css';
 import CryptoJS from 'crypto-js';
 import { useParams } from 'react-router-dom';
 
 
 
 
-function Home(props) {
+function HomeParams(props) {
     function cifrar(texto, clave) {
         let textodecifrado = CryptoJS.AES.decrypt(texto, clave).toString(CryptoJS.enc.Utf8)
         setText(textodecifrado)
     }
     const [text, setText] = useState("")
+    const { encrypted } = useParams()
+    const encryt = encrypted.replace(/[{]/g, '/')
     return (
         <div>
             <nav className='navbar'>
@@ -22,7 +23,7 @@ function Home(props) {
             <div className='introContainer'>
                 <div className='textareaContainer'>
                     <span className='subTitle'>Encriptado</span>
-                    <textarea className='inputEncrypt in' id='textcrypt' />
+                    <textarea className='inputEncrypt in' value={encryt} id='textcrypt' />
                 </div>
                 <div className='claveContainer'>
                     <span className='subTitle'>Clave</span>
@@ -34,7 +35,9 @@ function Home(props) {
             </div>
             <div className='desencryptContainer'>
                 <span className='subTitle' >Desencriptado</span>
-                <a href={text} target="_blank">{text}</a>
+                <div className={text ? "linkContainer" : "linkContainer hide"} >
+                    <a href={text} target="_blank"> <span className='link'>Ir al enlace</span></a>
+                </div>
             </div>
         </div>
     );
@@ -42,4 +45,4 @@ function Home(props) {
 
 
 
-export default Home;
+export default HomeParams;

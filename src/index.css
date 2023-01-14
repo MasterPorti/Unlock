@@ -96,7 +96,6 @@ p svg {
   width: initial;
 }
 body {
-  min-height: 100vh;
   font-size: 100%;
   hyphens: auto;
   font-smooth: always;
